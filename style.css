@@ -1,0 +1,187 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: white;
+	font-family: 'Nunito', sans-serif;
+}
+
+header {
+	display: flex;
+	min-height: 10vh;
+	background-color: transparent;
+	margin: 12px 0px 0px 12px;
+}
+
+.hero {
+	text-align: center;
+}
+
+.hero h1 {
+	font-size: 2rem;
+}
+
+.hero p {
+	font-size: 1.3rem;
+}
+
+.words {
+	width: 50%;
+	margin: auto;
+	align-items: center;
+	justify-content: left;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	color: #c9c9c9;
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 1rem;
+}
+
+.current-word {
+	color: black;
+}
+
+.correct {
+	color: rgb(0, 173, 0);
+}
+
+.wrong {
+	color: rgb(255, 166, 0);
+}
+
+span {
+	padding: 0.5rem;
+	font-size: 1.3rem;
+}
+
+.ui {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 30px;
+}
+
+.typing-input {
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid black;
+	background: transparent;
+	color: black;
+	font-size: 1.3rem;
+}
+
+.typing-end {
+	border: 2px solid #c9c9c9;
+	transition: all 0.5s ease-in-out;
+}
+
+.seconds {
+	font-size: 1.3rem;
+	margin-left: 20px;
+	text-align: center;
+	align-self: center;
+	border-radius: 5px;
+	border: 2px solid black;
+	padding: 10px;
+	pointer-events: none;
+}
+
+.timer {
+	display: flex;
+}
+
+.active-timer {
+	transition: all 0.5s ease-in-out;
+	color: #c9c9c9;
+	border: 2px solid #c9c9c9;
+}
+
+.redo-button {
+	margin-left: 20px;
+	padding: 10px 13px 10px 13px;
+	border: none;
+	border: 2px solid #c9c9c9;
+	background: none;
+	border-radius: 5px;
+	font-size: 15px;
+	color: #c9c9c9;
+}
+
+.redo-button:hover {
+	border: 2px solid rgb(73, 73, 255);
+	color: rgb(73, 73, 255);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.redo-end {
+	border: 2px solid rgb(73, 73, 255);
+	color: rgb(73, 73, 255);
+	transition: all 0.5s ease-in-out;
+}
+
+.reveal {
+	background: linear-gradient(45deg, #00d2ff 0%, #3a47d5 100%);
+	border-radius: 5px;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-bottom: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	opacity: 0;
+}
+
+.wpm {
+	text-align: center;
+	font-size: 1.5rem;
+	padding-bottom: 30px;
+	color: white;
+}
+
+.results {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 1.5rem;
+	color: white;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.finished {
+	opacity: 1;
+	transition: all 0.5s ease-in-out;
+}
+
+.correct-words {
+	padding-right: 4rem;
+}
+
+.incorrect-words {
+	padding-right: 4rem;
+}
+
+.start-help {
+	color: black;
+	font-size: 1.3rem;
+	text-align: center;
+	align-self: center;
+	transition: all 0.5s ease-in-out;
+}
+
+.end-help {
+	transition: all 0.5 ease-in-out;
+	opacity: 0;
+	pointer-events: none;
+}
+
+@media screen and (max-width: 850px) {
+	.words {
+		width: 90%;
+	}
+}

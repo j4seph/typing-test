@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Speed Typing Test</title>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<svg
+					width="50"
+					viewBox="0 0 468 955"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M468 721C468 850.2 363.2 955 234 955C104.8 955 0 850.2 0 721V630C0 586.9 34.9 552 78 552C121.1 552 156 586.9 156 630V721C156 764.1 191.4 799 234.5 799C277.6 799 312.8 764.1 312.8 721L313 277C313 233.9 347.5 199 390.5 199C433.5 199 468 233.9 468 277V721Z"
+						fill="#3EBBEB"
+					/>
+					<path
+						d="M390 156C433.078 156 468 121.078 468 78C468 34.9218 433.078 0 390 0C346.922 0 312 34.9218 312 78C312 121.078 346.922 156 390 156Z"
+						fill="#F05D49"
+					/>
+					<path
+						opacity="0.8"
+						d="M390 355C433.078 355 468 320.078 468 277C468 233.922 433.078 199 390 199C346.922 199 312 233.922 312 277C312 320.078 346.922 355 390 355Z"
+						fill="#DEFF13"
+					/>
+					<path
+						opacity="0.8"
+						d="M78 707C121.078 707 156 672.078 156 629C156 585.922 121.078 551 78 551C34.9218 551 0 585.922 0 629C0 672.078 34.9218 707 78 707Z"
+						fill="#3B459B"
+					/>
+				</svg>
+			</div>
+		</header>
+		<main>
+			<div class="hero">
+				<h1>Speed Typing Test</h1>
+				<p>How many words can you type in a minute?</p>
+			</div>
+			<div class="words"></div>
+			<div class="ui">
+				<div class="typing-field">
+					<input type="text" class="typing-input" />
+				</div>
+				<div class="timer">
+					<p class="seconds">60</p>
+					<button class="redo-button"><i class="fas fa-redo-alt"></i></button>
+				</div>
+			</div>
+			<p class="start-help">Start typing to begin the 60 second timer</p>
+			<div class="reveal" id="gradient-border">
+				<h1 class="wpm"></h1>
+				<div class="results">
+					<p class="correct-words"></p>
+					<p class="incorrect-words"></p>
+					<p class="accuracy"></p>
+				</div>
+			</div>
+		</main>
+		<script src="./app.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+			integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
