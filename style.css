@@ -5,15 +5,12 @@
 }
 
 body {
-	background: white;
-	font-family: 'Nunito', sans-serif;
+	background: #0b0c0d;
+	font-family: "Nunito", sans-serif;
 }
 
-header {
-	display: flex;
-	min-height: 10vh;
-	background-color: transparent;
-	margin: 12px 0px 0px 12px;
+.logo {
+	margin: 25px 0px 50px 25px;
 }
 
 .hero {
@@ -22,10 +19,12 @@ header {
 
 .hero h1 {
 	font-size: 2rem;
+	color: white;
 }
 
 .hero p {
 	font-size: 1.3rem;
+	color: white;
 }
 
 .words {
@@ -35,14 +34,14 @@ header {
 	justify-content: left;
 	padding-top: 50px;
 	padding-bottom: 30px;
-	color: #c9c9c9;
+	color: #2f3336;
 	display: flex;
 	flex-wrap: wrap;
 	line-height: 1rem;
 }
 
 .current-word {
-	color: black;
+	color: white;
 }
 
 .correct {
@@ -50,7 +49,7 @@ header {
 }
 
 .wrong {
-	color: rgb(255, 166, 0);
+	color: rgb(255, 72, 0);
 }
 
 span {
@@ -68,14 +67,14 @@ span {
 .typing-input {
 	padding: 10px;
 	border-radius: 5px;
-	border: 2px solid black;
+	border: 2px solid white;
 	background: transparent;
-	color: black;
+	color: white;
 	font-size: 1.3rem;
 }
 
 .typing-end {
-	border: 2px solid #c9c9c9;
+	border: 2px solid #202325;
 	transition: all 0.5s ease-in-out;
 }
 
@@ -85,7 +84,8 @@ span {
 	text-align: center;
 	align-self: center;
 	border-radius: 5px;
-	border: 2px solid black;
+	border: 2px solid white;
+	color: white;
 	padding: 10px;
 	pointer-events: none;
 }
@@ -96,31 +96,31 @@ span {
 
 .active-timer {
 	transition: all 0.5s ease-in-out;
-	color: #c9c9c9;
-	border: 2px solid #c9c9c9;
+	color: #202325;
+	border: 2px solid #202325;
 }
 
 .redo-button {
 	margin-left: 20px;
 	padding: 10px 13px 10px 13px;
 	border: none;
-	border: 2px solid #c9c9c9;
+	border: 2px solid#202325;
 	background: none;
 	border-radius: 5px;
 	font-size: 15px;
-	color: #c9c9c9;
+	color: #202325;
 }
 
 .redo-button:hover {
-	border: 2px solid rgb(73, 73, 255);
-	color: rgb(73, 73, 255);
+	border: 2px solid #00d2ff;
+	color: #00d2ff;
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
 }
 
 .redo-end {
-	border: 2px solid rgb(73, 73, 255);
-	color: rgb(73, 73, 255);
+	border: 2px solid #00d2ff;
+	color: #00d2ff;
 	transition: all 0.5s ease-in-out;
 }
 
@@ -167,7 +167,7 @@ span {
 }
 
 .start-help {
-	color: black;
+	color: #00d2ff;
 	font-size: 1.3rem;
 	text-align: center;
 	align-self: center;
@@ -183,5 +183,16 @@ span {
 @media screen and (max-width: 850px) {
 	.words {
 		width: 90%;
+	}
+
+	.reveal {
+		width: 100%;
+		margin: 5px auto;
+	}
+
+	.results {
+		display: block;
+		text-align: left;
+		margin: 15px 15px;
 	}
 }
