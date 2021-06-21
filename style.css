@@ -2,16 +2,44 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Nunito", sans-serif;
 }
 
 body {
 	background: #0b0c0d;
-	font-family: "Nunito", sans-serif;
 }
 
-.logo {
-	margin: 25px 0px 50px 25px;
+/* Header */
+
+header {
+	width: 85%;
+	max-width: 1250px;
+	margin: 50px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
+
+#logo {
+	height: 107px;
+	width: auto;
+}
+
+.portfolio-link {
+	align-items: center;
+	display: flex;
+	border: none;
+	background: none;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	margin-right: 20px;
+}
+
+/* Hero */
 
 .hero {
 	text-align: center;
@@ -27,14 +55,17 @@ body {
 	color: white;
 }
 
+/* Content/Words */
+
 .words {
-	width: 50%;
+	max-width: 900px;
+	min-width: 500px;
 	margin: auto;
 	align-items: center;
 	justify-content: left;
 	padding-top: 50px;
 	padding-bottom: 30px;
-	color: #2f3336;
+	color: #52585c;
 	display: flex;
 	flex-wrap: wrap;
 	line-height: 1rem;
@@ -45,7 +76,7 @@ body {
 }
 
 .correct {
-	color: rgb(0, 173, 0);
+	color: rgb(0, 199, 0);
 }
 
 .wrong {
@@ -56,6 +87,8 @@ span {
 	padding: 0.5rem;
 	font-size: 1.3rem;
 }
+
+/* User controls */
 
 .ui {
 	display: flex;
@@ -74,7 +107,7 @@ span {
 }
 
 .typing-end {
-	border: 2px solid #202325;
+	border: 2px solid #52585c;
 	transition: all 0.5s ease-in-out;
 }
 
@@ -96,19 +129,19 @@ span {
 
 .active-timer {
 	transition: all 0.5s ease-in-out;
-	color: #202325;
-	border: 2px solid #202325;
+	color: #52585c;
+	border: 2px solid #52585c;
 }
 
 .redo-button {
 	margin-left: 20px;
 	padding: 10px 13px 10px 13px;
 	border: none;
-	border: 2px solid#202325;
+	border: 2px solid#52585c;
 	background: none;
 	border-radius: 5px;
 	font-size: 15px;
-	color: #202325;
+	color: #52585c;
 }
 
 .redo-button:hover {
@@ -123,6 +156,22 @@ span {
 	color: #00d2ff;
 	transition: all 0.5s ease-in-out;
 }
+
+.start-help {
+	color: #00d2ff;
+	font-size: 1.3rem;
+	text-align: center;
+	align-self: center;
+	transition: all 0.5s ease-in-out;
+}
+
+.end-help {
+	transition: all 0.5 ease-in-out;
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* End results */
 
 .reveal {
 	background: linear-gradient(45deg, #00d2ff 0%, #3a47d5 100%);
@@ -166,23 +215,20 @@ span {
 	padding-right: 4rem;
 }
 
-.start-help {
-	color: #00d2ff;
-	font-size: 1.3rem;
-	text-align: center;
-	align-self: center;
-	transition: all 0.5s ease-in-out;
-}
+@media screen and (max-width: 1000px) {
+	body {
+		overflow-x: hidden;
+	}
 
-.end-help {
-	transition: all 0.5 ease-in-out;
-	opacity: 0;
-	pointer-events: none;
-}
+	#logo {
+		height: 90px;
+		width: auto;
+		margin-bottom: 25px;
+	}
 
-@media screen and (max-width: 850px) {
 	.words {
-		width: 90%;
+		max-width: 90%;
+		min-width: 250px;
 	}
 
 	.reveal {
