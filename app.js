@@ -324,4 +324,6 @@ input.addEventListener('keypress', (e) => {
 	}
 });
 
+// Reset the game or shuffle the words
 redoButton.addEventListener('click', redo);
+
