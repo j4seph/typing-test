@@ -19,6 +19,7 @@ const incorrWords = document.querySelector('.incorrect-words');
 const accuracy = document.querySelector('.accuracy');
 const wpm = document.querySelector('.wpm');
 const reveal = document.querySelector('.reveal');
+const escKey = 27;
 
 let wordArray = [
 	'hello',
@@ -327,3 +328,8 @@ input.addEventListener('keypress', (e) => {
 // Reset the game or shuffle the words
 redoButton.addEventListener('click', redo);
 
+document.addEventListener('keyup', (e) => {
+	if (e.keyCode === escKey) {
+		redo();
+	}
+});
