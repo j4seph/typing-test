@@ -7,6 +7,7 @@ let correctWords = 0;
 let incorrectWords = 0;
 let currentWord = 0;
 let index = 0;
+let highScore = 0;
 
 const words = document.querySelector('.words');
 const input = document.querySelector('.typing-input');
@@ -19,6 +20,7 @@ const incorrWords = document.querySelector('.incorrect-words');
 const accuracy = document.querySelector('.accuracy');
 const wpm = document.querySelector('.wpm');
 const reveal = document.querySelector('.reveal');
+const highScoreDiv = document.querySelector('.high-score');
 const escKey = 27;
 
 let wordArray = [
@@ -182,6 +184,9 @@ function shuffle(array) {
 shuffledWords = shuffle(wordArray);
 
 function displayShuffledWords() {
+	//need to show the highscore in here first so that it can be updated later
+	highScoreDiv.innerText = `Your current high score is: ${highScore}`;
+
 	//display the array on-screen and add a class with the word number
 	shuffledWords.forEach((word) => {
 		const x = document.createElement('span');
@@ -261,6 +266,7 @@ function countdown(e) {
 						reveal.classList.add('finished');
 						calculateAccuracy();
 						calculateWpm();
+						updateHighScore();
 					}
 				}
 			}
@@ -283,7 +289,21 @@ function calculateWpm() {
 	z = Math.floor(y);
 
 	wpm.innerText = `Words Per Minute: ${z}`;
+
+	//function to update the highscore on the page, put in here as it needs the updated wpm
+	if (highScore === 0) {
+		highScore = z;
+		highScoreDiv.innerText = `Your current high score is: ${highScore}`;
+	} else if (z > highScore) {
+		highScore = z;
+		highScoreDiv.innerText = `Your current high score is: ${highScore}`;
+		// const x = document.createElement('span');
+		// x.innerText = word;
+		// x.classList.add(`word-${index}`);
+		// words.appendChild(x);
+	}
 }
+
 
 //reset everything back to its original state to start again
 function redo() {
